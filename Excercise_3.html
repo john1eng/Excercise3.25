@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body onload=>
+    <script>
+
+var person = {
+    firstname: "John",
+    lastname: "Eng",
+    resident: "New York",
+    age: "36"
+};
+
+function printFullName(){
+    console.log(this.firstname + " " + this.lastname);
+}
+function printDetail(){
+    console.log(this.firstname + " " + this.lastname);
+    console.log(this.resident);
+    console.log(this.age);
+}
+var boundPrintFullName = printFullName.bind(person);
+var boundPrintDetail = printDetail.bind(person);
+
+boundPrintFullName();
+boundPrintDetail();
+      </script>
+  </body>
+</html>

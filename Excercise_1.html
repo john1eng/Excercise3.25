@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Multiply by 5</title>
+  </head>
+  <body>
+    <h1>Number Multiply by 5</h1>
+    <h2>Excercise 1/ By John Eng
+    <br><br>
+    <h3>Please enter a number<h3>
+      <input type="number" id="NUM"> </input>
+      <button type="submit" onclick = mult5(getElementById("NUM").value)> Submit </button>
+
+      <h4 id="result"></h4>
+
+    <script>
+      function mult5(NUM){
+        document.getElementById("result").innerHTML = NUM + " mulitiply by 5 is " + NUM*5;
+      }
+    </script>
+  </body>
+</html>

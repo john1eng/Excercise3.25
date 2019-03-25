@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Describe Person</title>
+  </head>
+  <body>
+    <h1>Describe this Person</h1>
+    <h2>Excercise 2/ By John Eng</h2>
+    <br><br>
+
+      <label>Person Name: </label><input type="text" id="NAME"><br>
+      <label>Person Age: </label><input type="text" id="AGE"><br>
+      <button type="button" onclick="result()">submit </button>
+
+      <h4 id="result"></h4>
+
+    <script>
+      function result(){
+        var myPerson = new Person(document.getElementById('NAME').value,document.getElementById('AGE').value);
+        console.log(document.getElementById('NAME').value);
+        document.getElementById("result").innerHTML = myPerson.describe();
+      }
+
+      function Person(NAME,AGE){
+        console.log("hello");
+        this.NAME = NAME;
+        this.AGE = AGE;
+        this.describe = function(){
+          return this.NAME + " is " + this.AGE + " years old";
+        }
+      }
+
+
+    </script>
+  </body>
+</html>
